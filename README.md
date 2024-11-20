@@ -1,16 +1,38 @@
-# di_practrice
+# Flutter DI and Repository Pattern Example
 
-A new Flutter project.
+This is a Flutter practice app that demonstrates how to implement Dependency Injection (DI) and the Repository Pattern. The app fetches posts from the [JSONPlaceholder API](https://jsonplaceholder.typicode.com/posts), using the `http` package to make network requests. The app architecture uses the `Provider` for state management and `GetIt` for DI. 
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- Fetch posts data from JSONPlaceholder API.
+- Implemented Repository Pattern for API interactions.
+- Dependency Injection using `GetIt` for better separation of concerns.
+- State management using `Provider` for UI updates.
 
-A few resources to get you started if this is your first Flutter project:
+## Tech Stack
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Flutter**: Cross-platform mobile development framework.
+- **http**: To make network requests to the JSONPlaceholder API.
+- **Provider**: For state management.
+- **GetIt**: For dependency injection.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Project Structure
+
+The project is organized as follows:
+
+- `lib/`
+  - `main.dart`: Entry point of the app.
+  - `core/`: Contains the core structure of the app.
+    - `models/`: Contains data models (e.g., `Post`).
+    - `repository/`: Contains classes implementing the Repository Pattern for data management (e.g., `PostRepository`).
+    - `service/`: Contains classes responsible for interacting with external services (e.g., `PostService`).
+    - `provider/`: Contains state management classes using `Provider` (e.g., `PostProvider`).
+    - `view/`: Contains the UI layer, including screens and widgets.
+
+## Setup & Installation
+
+1. Clone this repository:
+
+   ```bash
+   git clone https://github.com/yourusername/your-repo-name.git
+   cd your-repo-name
